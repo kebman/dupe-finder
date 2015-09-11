@@ -1,5 +1,5 @@
 CREATE TABLE if not exists file_info (
-	id INTEGER PRIMARY KEY,
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	filename TEXT,
 	md5 TEXT,
 	size INTEGER,
