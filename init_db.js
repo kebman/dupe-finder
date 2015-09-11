@@ -8,7 +8,7 @@ db.serialize(function() {
 		'filename TEXT,'+
 		'mtime INTEGER,'+
 		'btime INTEGER,'+
-		'size INTEGER')', function(err) {
+		'size INTEGER)', function(err) {
 		if (err) {
 			console.error("Error creating database", err);
 		} else {
