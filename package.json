@@ -1,0 +1,14 @@
+{
+  "name": "dupe_finder",
+  "version": "0.0.1",
+  "description": "Find duplicate files on you hard drive--and NUKE them for more drive space",
+  "main": "app.js",
+  "keywords": [
+    "dupe", "duplicates", "files", "finder", "sort", "erase", "delete", "drive", "space"
+  ],
+  "author": "kebman",
+  "license": "MIT",
+  "dependencies": {
+    "sqlite3": "3.1.x"
+  }
+}
