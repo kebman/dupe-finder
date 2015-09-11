@@ -4,12 +4,11 @@ var db = new sqlite3.Database(file);
 
 db.serialize(function() {
 	db.run('CREATE TABLE if not exists "files" '+
-		'(id INTEGER PRIMARY KEY AUTOINCREMENT,'+
+		'('md5 TEXT,'+
 		'filename TEXT,'+
-		'md5 TEXT,'+
-		'size INTEGER,'+
-		'mtime TEXT,'+
-		'btime TEXT)', function(err) {
+		'mtime INTEGER,'+
+		'btime INTEGER,
+		'size INTEGER')', function(err) {
 		if (err) {
 			console.error("Error creating database", err);
 		} else {
