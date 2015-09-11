@@ -4,7 +4,7 @@ var db = new sqlite3.Database(file);
 
 db.serialize(function() {
 	db.run('CREATE TABLE if not exists "files" '+
-		'('md5 TEXT,'+
+		'(md5 TEXT,'+
 		'filename TEXT,'+
 		'mtime INTEGER,'+
 		'btime INTEGER,'+
