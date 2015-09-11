@@ -1,2 +1,2 @@
 # DupeFinder
-DupeFinder: Duplicate File Finder for Node.js
+Duplicate File Finder for Node.js
