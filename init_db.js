@@ -7,7 +7,7 @@ db.serialize(function() {
 		'('md5 TEXT,'+
 		'filename TEXT,'+
 		'mtime INTEGER,'+
-		'btime INTEGER,
+		'btime INTEGER,'+
 		'size INTEGER')', function(err) {
 		if (err) {
 			console.error("Error creating database", err);
