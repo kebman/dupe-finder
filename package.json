@@ -9,6 +9,7 @@
   "author": "kebman",
   "license": "MIT",
   "dependencies": {
+    "bluebird": "2.10.x",
     "sqlite3": "3.1.x"
   }
 }
