@@ -21,24 +21,22 @@ var df = {
 // iterate asyncronously trough a directory of files and do some magic...
 fs.readdirAsync('.').map(function(filename) {
 	var stat = fs.statAsync(filename);
-	var contents = fs.readFileAsync(filename).catch(function ignoreDirs() {});
-	return Promise.join(stat, contents, function(stat, contents) {
+	return Promise.join(stat, function(stat) {
 		return {
 			stat: stat,
-			filename: filename,
-			contents: contents
+			name: filename
 		}
 	});
 }).each(function(file) {
 	if (!file.stat.isDirectory()) {
 		var hash = crypto.createHash('md5'), 
-		stream = fs.createReadStream(file.filename);
+		stream = fs.createReadStream(file.name);
 		stream.on('data', function (data) {
 			hash.update(data, 'utf8');
 		});
 		stream.on('end', function () {
-		// test output...
-			console.log(hash.digest('hex') + "|" + file.filename);
+			// test output...
+			console.log(hash.digest('hex') + "|" + file.name);
 			// console.log(file.stat.atime + " ; " + file.stat.mtime + " ; " + file.stat.ctime + " ; " + file.stat.birthtime);
 		});
 	}		
