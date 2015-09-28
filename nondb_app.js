@@ -19,8 +19,7 @@ if (process.argv.length = 4) {
 	pathB = process.argv.[2];
 }
 */
-// for now, though, we'll just set pathB to test/
-// var pathB = "/home/kebman/Desktop/node_local_projects/dupeFinder/test";
+// for now, though, we'll just leave it for testing
 
 var readdirPromise = fs.readdirAsync(".").map(function(fileName) {
 	var statPromise = fs.statAsync(fileName);
